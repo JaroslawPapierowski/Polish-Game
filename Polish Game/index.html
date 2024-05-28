@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra - mapa Polski</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="map-container">
+        <div id="map">
+
+        </div>
+    </div>    
+    <div id="overlay">
+        <div class="start" id="startDiv">
+            <div class="tytul">
+                Rozpocznij Quiz o Województwach w Polsce!
+            </div>
+        <div class="zasady">
+             <span class="zas">Zasady:</span> Po prawej stronie pojawi się nazwa województwa należy kliknąć na właściwe województwo.
+            Gdy wskażemy na poprawne województwo to podświetli się na <span class="poprawne">zielono</span>,
+            a gdy źle wskażemy to na <span class="niepoprawne">czerwono</span>. Aby rozpocząć gre kliknij w <span class="STA">START</span>.
+        </div>
+        <button class="rozpocznij" onclick="rozpocznijGru()"> START </button>
+        </div>
+    </div>
+        <div class="restart">
+            <div class="quiz">
+                Guesser
+            </div>
+            <ul id="wojewodztwo">
+
+            </ul>
+            <button class="reset" onclick="sprawdzOdpowiedz()"> Zresetuj </button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <script src="./app.js"></script>  
+</body>
+</html>
